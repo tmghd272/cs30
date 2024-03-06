@@ -1,9 +1,8 @@
-nnv nv
-# CS30
+# [CS30](https://tmghd272.github.io/cs30/)
 
 ## Info
-- [traffic-light](Traffic Light)
-- [Bouncing-Ball](Bouncing Ball)
+- [Traffic Light](https://tmghd272.github.io/cs30/Traffic%20Light/)
+- [Bouncing Ball](https://tmghd272.github.io/cs30/Bouncing%20Ball/)
 
 ## Projects
 
