@@ -1,8 +1,8 @@
 # CS30
 
 ## Info
- (traffic-light)(Traffic Light)
-
+- [traffic-light](TrafficLight)
+- [Bouncing Ball](BouncingBall)
 
 ## Projects
 
