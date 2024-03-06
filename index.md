@@ -12,4 +12,4 @@ JavaScripts
 - [Visual-Windows-Forms]
 - [Game-Server]
 
-# [Source](https://github.com/tmghd272/cs30)
+# [git](https://github.com/tmghd272/cs30)
