@@ -1,7 +1,7 @@
-# CS30
+# [CS30](https://github.com/tmghd272/cs30)
 
 ## Info
-- [traffic-light](Traffic Light)
+- [Traffic-Light](Traffic Light)
 - [Bouncing-Ball](Bouncing Ball)
 
 ## Projects
