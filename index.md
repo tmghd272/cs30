@@ -6,4 +6,11 @@
 
 ## Projects
 
+- [JavaScript]
+- [HTML]
+- [Python]
+- [Unity]
+- [Visual-Windows-Forms]
+- [Game-Server]
+
 ##
