@@ -1,11 +1,10 @@
-# [CS30](https://github.com/tmghd272/cs30)
+## Projects
 
-## Info
+JavaScripts
 - [Traffic-Light](Traffic Light)
 - [Bouncing-Ball](Bouncing Ball)
 
-## Projects
-
+## Testing Projects
 - [JavaScript]
 - [HTML]
 - [Python]
@@ -13,4 +12,4 @@
 - [Visual-Windows-Forms]
 - [Game-Server]
 
-##
+# [Source](https://github.com/tmghd272/cs30)
