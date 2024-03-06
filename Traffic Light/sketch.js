@@ -64,16 +64,19 @@ function drawCorrectLight() {
 function drawGreenLight() {
   fill("green");
   ellipse(width / 2, height / 2 + 65, 50, 50); //bottom
+  console.log("GO!");
 }
 
 function drawYellowLight() {
   fill("yellow");
   ellipse(width / 2, height / 2, 50, 50); //middle
+  console.log("lol");
 }
 
 function drawRedLight() {
   fill("red");
   ellipse(width / 2, height / 2 - 65, 50, 50); //top
+  console.log("STOP!");
 }
 
 function drawOutlineOfLights() {
