@@ -10,6 +10,6 @@ JavaScripts
 - [Python]
 - [Unity]
 - [Visual-Windows-Forms]
-- [Game-Server]
+- [Port-Fowarding-Servers]
 
 # [git](https://github.com/tmghd272/cs30)
