@@ -1,15 +1,25 @@
-// Project Title
-// Your Name
-// Date
-//
-// Extra for Experts:
-// - describe what you did to take this project "above and beyond"
+//collide2d demo
 
+let hit = false;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(400, 400);
 }
 
+
 function draw() {
-  background(220);
+  background(255);
+  rect(200, 200, 100, 150);
+  circle(mouseX, mouseY, 100);
+
+  hit = collideRectCircle(200, 200, 100, 150, mouseX, mouseY, 100);
+
+  if (hit) {
+    stroke("red");
+  }
+  else {
+    stroke("black");
+  }
+
+  console.log("colliding?", hit);
 }
