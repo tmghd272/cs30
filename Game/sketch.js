@@ -29,22 +29,22 @@ let y;
 let dx;
 let dy;
 let radius = 30;
-let r = 0;
+let r = 120;
 let g = 255;
-let b = 0;
+let b = 120;
 
 function setup() {
-  createCanvas(300, 300);
+  createCanvas(1280, 720);
   x = width / 2;
   y = height / 2;
-  dx = random(-5, 5);
-  dy = random(-5, 5);
+  dx = random(-10, 10;
+  dy = random(-10, 10);
   changeCircleColour();
   noStroke();
 }
 
 function draw() {
-  background(220);
+  background(660);
 
   drawCircle();
   moveCircle();
@@ -52,9 +52,9 @@ function draw() {
 }
 
 function keyTyped() {
-  if (key === " ") {
-    dx = random(-5, 5);
-    dy = random(-5, 5);
+  if (key === "d") {
+    dx = random(-10, 10);
+    dy = random(-10, 10);
   }
   if (key === "c") {
     changeCircleColour();
