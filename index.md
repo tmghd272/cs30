@@ -8,7 +8,7 @@ JavaScripts
 - [Generative Art](Art)
 
 ## Projects
-- [Interactive-Scene](Game)
+- [Interactive-Scene]()
 
 
 # [git](https://github.com/tmghd272/cs30)

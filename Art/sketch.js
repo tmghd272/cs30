@@ -1,7 +1,7 @@
 // Generative Art Demo
 // Mar 15, 2024
 
-let tileSize = 20;
+let tileSize = 4;
 let theTiles = [];
 
 function setup() {
