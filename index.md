@@ -5,6 +5,7 @@ JavaScripts
 - [Bouncing-Ball](Bouncing Ball)
 - [Collision-Demo](Collision)
 - [Arrays and Objects](Circles)
+- [Generative Art](Art)
 
 ## Projects
 - [Interactive-Scene](Game)
