@@ -6,6 +6,7 @@ JavaScripts
 - [Collision-Demo](Collision)
 - [Arrays and Objects](Circles)
 - [Generative Art](Art)
+- [Terrain Generation](Terrain)
 
 ## Projects
 - [Interactive-Scene]()
