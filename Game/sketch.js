@@ -14,11 +14,13 @@ let scoreElem;
 
 function setup() {
   scoreElem = createDiv('Score = 0');
-  scoreElem.position(20, 20);
+  scoreElem.position(20, 35);
   scoreElem.id = 'score';
   scoreElem.style('color', 'rgb(255,0,0)');
+  scoreElem.style("font-size", "25px");
+  scoreElem.style("font-family", "Comic Sans MS");
 
-  createCanvas(windowWidth,windowHeight - 22.5); //fixed window since button exists
+  createCanvas(windowWidth,windowHeight - 30); //fixed window since button exists
   frameRate(15);// snake speed
   stroke(255,10,75);// snake and ball colour
   strokeWeight(10);// snake and ball size
@@ -113,9 +115,6 @@ function updateFruitCoordinates() {
 }
 
 function keyPressed() {
-  if (keyCode == 8) {
-    start();
-  }
   switch (keyCode) {
     case 37:
       if (direction !== 'right') {
