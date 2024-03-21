@@ -18,7 +18,7 @@ function setup() {
   scoreElem.id = 'score';
   scoreElem.style('color', 'rgb(255,0,0)');
 
-  createCanvas(720,500);
+  createCanvas(windowWidth,windowHeight);
   frameRate(15);
   stroke(255,6,68);
   strokeWeight(10);
@@ -112,6 +112,9 @@ function updateFruitCoordinates() {
 }
 
 function keyPressed() {
+  if (keyCode == 8) {
+    start();
+  }
   switch (keyCode) {
     case 37:
       if (direction !== 'right') {
@@ -135,3 +138,4 @@ function keyPressed() {
       break;
   }
 }
+
