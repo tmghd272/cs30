@@ -17,11 +17,12 @@ function setup() {
   scoreElem.position(20, 20);
   scoreElem.id = 'score';
   scoreElem.style('color', 'rgb(255,0,0)');
-  scoreElem.size(AUTO, 30);
+  scoreElem.width(15)
+  scoreElem.height(15)
 
   createCanvas(windowWidth,windowHeight - 22.5); //fixed window since button exists
   frameRate(15);// snake speed
-  stroke(255,6,68);// snake and ball colour
+  stroke(255,10,75);// snake and ball colour
   strokeWeight(10);// snake and ball size
   updateFruitCoordinates();
 
