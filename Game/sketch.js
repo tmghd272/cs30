@@ -66,7 +66,7 @@ function updateSnakeCoordinates() {
   }
 }
 
-// score counter/status
+// recorded score
 function checkGameStatus() {
   if (
     xCor[xCor.length - 1] > width ||
