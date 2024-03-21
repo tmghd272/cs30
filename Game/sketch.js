@@ -18,7 +18,7 @@ function setup() {
   scoreElem.id = 'score';
   scoreElem.style('color', 'rgb(255,0,0)');
 
-  createCanvas(windowWidth,windowHeight);
+  createCanvas(windowWidth,windowHeight - 22.5);
   frameRate(15);
   stroke(255,6,68);
   strokeWeight(10);
