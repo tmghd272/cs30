@@ -21,7 +21,7 @@ function setup() {
   createCanvas(windowWidth,windowHeight - 22.5); //fixed window since button exists
   frameRate(15);// snake speed
   stroke(255,10,75);// snake and ball colour
-  strokeWeight(20);// snake and ball size
+  strokeWeight(10);// snake and ball size
   updateFruitCoordinates();
 
 
