@@ -17,7 +17,7 @@ function setup() {
   scoreElem.position(20, 20);
   scoreElem.id = 'score';
   scoreElem.style('color', 'rgb(255,0,0)');
-  scoreElem.size(20,0);
+  scoreElem.size(30, auto);
 
   createCanvas(windowWidth,windowHeight - 22.5); //fixed window since button exists
   frameRate(15);// snake speed
