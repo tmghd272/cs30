@@ -9,7 +9,7 @@ JavaScripts
 - [Terrain Generation](Terrain)
 
 ## Projects
-- [Interactive-Scene]()
+- [Interactive-Scene](Game)
 
 
 # [git](https://github.com/tmghd272/cs30)
