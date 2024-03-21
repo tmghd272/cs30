@@ -16,13 +16,14 @@ function setup() {
   scoreElem = createDiv('Score = 0');
   scoreElem.position(20, 20);
   scoreElem.id = 'score';
-  scoreElem.style('color', 'white');
+  scoreElem.style('color', 'rgb(255,0,0)');
 
-  createCanvas(500, 500);
+  createCanvas(720,500);
   frameRate(15);
-  stroke(255);
+  stroke(255,6,68);
   strokeWeight(10);
   updateFruitCoordinates();
+
 
   for (let i = 0; i < numSegments; i++) {
     xCor.push(xStart + i * diff);
@@ -31,7 +32,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(200,200,255);
   for (let i = 0; i < numSegments - 1; i++) {
     line(xCor[i], yCor[i], xCor[i + 1], yCor[i + 1]);
   }
