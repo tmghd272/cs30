@@ -18,10 +18,10 @@ function setup() {
   scoreElem.id = 'score';
   scoreElem.style('color', 'rgb(255,0,0)');
 
-  createCanvas(windowWidth,windowHeight - 22.5);
+  createCanvas(windowWidth,windowHeight - 22.5); //fixed window since button exists
   frameRate(15);
-  stroke(255,6,68);
-  strokeWeight(10);
+  stroke(255,6,68);// snake and ball colour
+  strokeWeight(10);// snake and ball size
   updateFruitCoordinates();
 
 
@@ -66,6 +66,7 @@ function updateSnakeCoordinates() {
   }
 }
 
+// score counter/status
 function checkGameStatus() {
   if (
     xCor[xCor.length - 1] > width ||
