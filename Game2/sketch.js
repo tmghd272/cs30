@@ -17,7 +17,5 @@ function setup() {
 
 function draw() {
   background(r,g,b); 
-  square(x, y, 100)
-
-  
+  point(x, y);
 }
