@@ -10,7 +10,9 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  noLoop();
+  background(random(100,200), random(100,200), random(100,200));
+  noStroke();
   moveBalls();
   displayBalls();
 }

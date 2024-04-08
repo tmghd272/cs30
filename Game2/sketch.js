@@ -10,7 +10,6 @@ function setup() {
 }
 
 function draw() {
+  noLoop();
   background(random(100,200), random(100,200), random(100,200)); 
-  
-  circle(x, y);
 }
