@@ -7,17 +7,17 @@
 
 let x;
 let y;
-let r;
-let g;
-let b;
+let a = random(200, 240);
+let b = random(200, 240);
+let c = random(200, 255);
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  background(255,240,220);
-  
-  square(random)
+  background(a,b,c); 
+  square(random, random)
 
+  
 }
