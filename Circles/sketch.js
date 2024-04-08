@@ -10,11 +10,15 @@ function setup() {
 }
 
 function draw() {
-  noLoop();
-  background(random(100,200), random(100,200), random(100,200));
-  noStroke();
-  moveBalls();
-  displayBalls();
+  { 
+    noLoop();
+    background(random(100,200), random(100,200), random(100,200));
+  }
+  {
+    loop();
+    moveBalls();
+    displayBalls();
+  }
 }
 
 function mousePressed() {
