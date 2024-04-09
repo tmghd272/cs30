@@ -11,5 +11,6 @@ function setup() {
 
 function draw() {
   noLoop();
-  background(random(100,200), random(100,200), random(100,200)); 
+  background(random(100,200), random(100,200), random(100,200));
+  
 }

@@ -7,6 +7,9 @@ JavaScripts
 - [Arrays and Objects](Circles)
 - [Generative Art](Art)
 - [Terrain Generation](Terrain)
+- [Translate/Rotate](Translate)
+- [Bubble Movement](Bubble)
+- [2D Grid](Grid)
 
 ## Projects
 - [Interactive-Scene](Game)
