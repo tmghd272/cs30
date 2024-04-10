@@ -52,6 +52,26 @@ function mousePressed() {
     toggleCell(x, y);
   }
 
+  // is moving one cell to right still on the grid?
+  if (x + 1 < GRID_SIZE && y < GRID_SIZE){
+    toggleCell(x + 1, y);
+  }
+
+  // is moving one cell to right still on the grid?
+  if (x + 1 < GRID_SIZE && y < GRID_SIZE){
+    toggleCell(x - 1, y);
+  }
+
+  // is moving one cell to right still on the grid?
+  if (x + 1 < GRID_SIZE && y < GRID_SIZE){
+    toggleCell(x, y + 1);
+  }
+
+  // is moving one cell to right still on the grid?
+  if (x + 1 < GRID_SIZE && y < GRID_SIZE){
+    toggleCell(x, y - 1);
+  }
+
 }
 
 function toggleCell(x, y) {
