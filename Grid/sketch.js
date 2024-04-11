@@ -13,16 +13,36 @@
 //             [0, 1, 0, 1],
 //             [0, 0, 0, 1]];
 
-//if randomizing the grid, do this:
 let grid;
 let cellSize;
 const GRID_SIZE = 10;
+let toggleStyle = "self";
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  //make the canvas the largest square that you can...
+  if (windowWidth < windowHeight) {
+    createCanvas(windowWidth, windowWidth);
+  }
+  else {
+    createCanvas(windowHeight, windowHeight);
+  }
+
+  //if randomizing the grid, do this:
   grid = generateRandomGrid(GRID_SIZE, GRID_SIZE);
   
   //this is dumb -- should check if this is the right size!
+  cellSize = height/grid.length;
+}
+
+function windowResized() {
+  //make the canvas the largest square that you can...
+  if (windowWidth < windowHeight) {
+    resizeCanvas(windowWidth, windowWidth);
+  }
+  else {
+    resizeCanvas(windowHeight, windowHeight);
+  }
+
   cellSize = height/grid.length;
 }
 
@@ -39,48 +59,43 @@ function keyPressed() {
   if (key === "e") {
     grid = generateEmptyGrid(GRID_SIZE, GRID_SIZE);
   }
+
+  if (key === "n") {
+    toggleStyle = "neighbours";
+  }
+
+  if (key === "s") {
+    toggleStyle = "self";
+  }
 }
 
 function mousePressed() {
   let x = Math.floor(mouseX/cellSize);
   let y = Math.floor(mouseY/cellSize);
 
-  // console.log(x, y);
+  //toggle self
+  toggleCell(x, y);
 
-  // don't fall of the edge of the grid
-  if (x < GRID_SIZE && y < GRID_SIZE){
-    toggleCell(x, y);
-  }
-
-  // is moving one cell to right still on the grid?
-  if (x + 1 < GRID_SIZE && y < GRID_SIZE){
+  // and NESW neighbours, if style is set to neighbours
+  if (toggleStyle === "neighbours") {
     toggleCell(x + 1, y);
-  }
-
-  // is moving one cell to right still on the grid?
-  if (x + 1 < GRID_SIZE && y < GRID_SIZE){
     toggleCell(x - 1, y);
-  }
-
-  // is moving one cell to right still on the grid?
-  if (x + 1 < GRID_SIZE && y < GRID_SIZE){
     toggleCell(x, y + 1);
-  }
-
-  // is moving one cell to right still on the grid?
-  if (x + 1 < GRID_SIZE && y < GRID_SIZE){
     toggleCell(x, y - 1);
   }
-
 }
 
 function toggleCell(x, y) {
-  // toggle the color of the cell
-  if (grid[y][x] === 0) {
-    grid[y][x] = 1;
-  }
-  else {
-    grid[y][x] = 0;
+  // make sure the cell you're toggling is in the grid...
+  if (x < GRID_SIZE && y < GRID_SIZE &&
+      x >= 0 && y >= 0) {
+    //toggle the color of the cell
+    if (grid[y][x] === 0) {
+      grid[y][x] = 1;
+    }
+    else {
+      grid[y][x] = 0;
+    }
   }
 }
 
