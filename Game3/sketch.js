@@ -48,7 +48,7 @@ function setup() {
 
   //texture or image size.
 
-  
+
   //equalize my sounds
   backgroundMusic.setVolume(0.4);
   cantWalkSound.setVolume(1.0);
