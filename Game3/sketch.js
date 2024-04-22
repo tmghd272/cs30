@@ -20,11 +20,11 @@ let cantWalkSound;
 let state = "start screen";
 
 function preload() {
-  grassImg = loadImage("grass.png");
-  pavingImg = loadImage("cobblestone.png");
-  character = loadImage("tiny_skelly-NESW.png");
-  backgroundMusic = loadSound("theme.wav");
-  cantWalkSound = loadSound("barrier.wav");
+  grassImg = loadImage("Assets/Images/grass.png");
+  pavingImg = loadImage("Assets/Images/cobblestone.png");
+  character = loadImage("Assets/Images/cobblestone.png");
+  backgroundMusic = loadSound("Assets/Sounds/theme.wav");
+  cantWalkSound = loadSound("Assets/Sounds/barrier.wav");
 }
 
 
@@ -68,7 +68,13 @@ function windowResized() {
 
 function draw() {
   if (state === "start screen") {
+
     background("black");
+    fill('white');
+    textFont('Courier New', 25)
+    textAlign(CENTER, CENTER);
+    text('welcome press spacebar', 350, 350);
+    
   }
   else if (state === "game") {
     background(220);
@@ -77,27 +83,27 @@ function draw() {
 }
 
 function keyPressed() {
-  if (key === "r") {
+  if (keyIsDown === "r") {
     grid = generateRandomGrid(GRID_SIZE, GRID_SIZE);
   }
 
-  if (key === "e") {
+  if (keyIsDown === "e") {
     grid = generateEmptyGrid(GRID_SIZE, GRID_SIZE);
   }
 
-  if (key === "w") {   //up
-    movePlayer(player.x + 0, player.y - 1); //0 on x axis, -1 on y axis
+  if (keyIsDown(87)) {   //up
+    movePlayer(player.x + 0, player.y =- 1); //0 on x axis, -1 on y axis
   }
 
-  if (key === "s") {   //down
-    movePlayer(player.x + 0, player.y + 1); //0 on x axis, 1 on y axis
+  if (keyIsDown(83)) {   //down
+    movePlayer(player.x + 0, player.y =+ 1); //0 on x axis, 1 on y axis
   }
 
-  if (key === "d") {   //right
+  if (keyIsDown === "d") {   //right
     movePlayer(player.x + 1, player.y + 0); //1 on x axis, 0 on y axis
   }
 
-  if (key === "a") {   //left
+  if (keyIsDown === "a") {   //left
     movePlayer(player.x - 1, player.y + 0); //-1 on x axis, 0 on y axis
   }
 
