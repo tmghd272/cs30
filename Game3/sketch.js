@@ -4,7 +4,7 @@
 
 let grid;
 let cellSize;
-const GRID_SIZE = 10;
+const GRID_SIZE = 15;
 const PLAYER = 9;
 const OPEN_TILE = 0;
 const IMPASSIBLE = 1;
@@ -18,6 +18,7 @@ let character;
 let backgroundMusic;
 let cantWalkSound;
 let state = "start screen";
+Number(prompt("HELLO", ""));
 
 function preload() {
   grassImg = loadImage("Assets/Images/grass.png");
@@ -92,18 +93,18 @@ function keyPressed() {
   }
 
   if (keyIsDown(87)) {   //up
-    movePlayer(player.x + 0, player.y =- 1); //0 on x axis, -1 on y axis
+    movePlayer(player.x + 0, player.y - 1); //0 on x axis, -1 on y axis
   }
 
   if (keyIsDown(83)) {   //down
-    movePlayer(player.x + 0, player.y =+ 1); //0 on x axis, 1 on y axis
+    movePlayer(player.x + 0, player.y + 1); //0 on x axis, 1 on y axis
   }
 
-  if (keyIsDown === "d") {   //right
+  if (keyIsDown(68)) {   //right
     movePlayer(player.x + 1, player.y + 0); //1 on x axis, 0 on y axis
   }
 
-  if (keyIsDown === "a") {   //left
+  if (keyIsDown(65)) {   //left
     movePlayer(player.x - 1, player.y + 0); //-1 on x axis, 0 on y axis
   }
 
