@@ -51,7 +51,7 @@ function setup() {
   tilesWide = lines[0].length;
 
   tileWidth = windowWidth / tilesWide;
-  tileHeight = windowheight / tilesHigh;
+  tileHeight = windowHeight / tilesHigh;
 
   tiles = createEmpty2dArray(tilesWide, tilesHigh);
 
