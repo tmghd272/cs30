@@ -36,22 +36,17 @@ function preload() {
 }
 
 function windowResized() {
+  createCanvas(100,windowHeight)
     // keep this a 4:3 ratio, or it will stretch in weird ways
-  //make the canvas the largest square that you can...
-  if (windowWidth < windowHeight) {
-    resizeCanvas(windowWidth, windowWidth);
-  }
-  else {
-    resizeCanvas(windowHeight, windowHeight);
-  }
+
 }
 
 function setup() {
   tilesHigh = lines.length;
   tilesWide = lines[0].length;
 
-  tileWidth = windowWidth / tilesWide;
-  tileHeight = windowHeight / tilesHigh;
+  tileWidth = 1000 / tilesWide;
+  tileHeight = 1000 / tilesHigh;
 
   tiles = createEmpty2dArray(tilesWide, tilesHigh);
 
