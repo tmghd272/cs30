@@ -69,13 +69,9 @@ function windowResized() {
 
 function draw() {
   if (state === "start screen") {
-
-    let sinVal = sin(frameCount * 0.05);
-    let fontSize = map(sinVal, -1, 1, 10, 200);
-    div.style("font-size", fontSize + "px");
-    background("black"); 
+    background("#522796"); 
     fill('white');
-    textFont('Courier New', 25)
+    textFont('Comic Sans MS', 35)
     textAlign(CENTER, CENTER);
     text('welcome press spacebar', 350, 350);
     
