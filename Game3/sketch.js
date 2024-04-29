@@ -5,7 +5,7 @@
 let grid;
 let cellSize;
 const GRID_SIZE = 15;
-const PLAYER = 9;
+const PLAYER = 10;
 const OPEN_TILE = 0;
 const IMPASSIBLE = 1;
 let player = {
@@ -23,7 +23,7 @@ Number(prompt("HELLO", ""));
 function preload() {
   grassImg = loadImage("Assets/Images/grass.png");
   pavingImg = loadImage("Assets/Images/cobblestone.png");
-  character = loadImage("Assets/Images/cobblestone.png");
+  character = loadImage("Assets/Images/player.png");
   backgroundMusic = loadSound("Assets/Sounds/theme.wav");
   cantWalkSound = loadSound("Assets/Sounds/barrier.wav");
 }
@@ -70,7 +70,10 @@ function windowResized() {
 function draw() {
   if (state === "start screen") {
 
-    background("black");
+    let sinVal = sin(frameCount * 0.05);
+    let fontSize = map(sinVal, -1, 1, 10, 200);
+    div.style("font-size", fontSize + "px");
+    background("black"); 
     fill('white');
     textFont('Courier New', 25)
     textAlign(CENTER, CENTER);
