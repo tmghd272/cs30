@@ -2,6 +2,10 @@
 // Enzo Batuigas
 // Apr 15, 2024
 
+// Character In 2D Grid (Maze Edition)
+// Enzo Batuigas
+// Apr 15, 2024
+
 let grid;
 let cellSize;
 const GRID_SIZE = 15;
@@ -12,10 +16,18 @@ let player = {
   y: 0,
 };
 let character;
+let grassImg;
+let pavingImg;
+let backgroundMusic;
+let cantWalkSound;
 let state = "start screen";
 
 function preload() {
   character = loadImage("Assets/Images/player.png");
+  grassImg = loadImage("Assets/Images/grass.png");
+  pavingImg = loadImage("Assets/Images/cobblestone.png");
+  backgroundMusic = loadSound("Assets/Sounds/theme.wav");
+  cantWalkSound = loadSound("Assets/Sounds/barrier.wav");
 }
 
 function setup() {
@@ -44,31 +56,26 @@ function draw() {
 }
 
 function keyPressed() {
-  if (state === "game") {
-    let newX = player.x;
-    let newY = player.y;
+  if (state !== "game") return;
 
-    if (keyIsDown(UP_ARROW)) {
-      newY -= 1;
-    }
-    if (keyIsDown(DOWN_ARROW)) {
-      newY += 1;
-    }
-    if (keyIsDown(RIGHT_ARROW)) {
-      newX += 1;
-    }
-    if (keyIsDown(LEFT_ARROW)) {
-      newX -= 1;
-    }
+  let newX = player.x;
+  let newY = player.y;
 
-    if (isValidMove(newX, newY)) {
-      movePlayer(newX, newY);
-    }
+  if (keyIsDown(UP_ARROW)) {
+    newY -= 1;
+  }
+  if (keyIsDown(DOWN_ARROW)) {
+    newY += 1;
+  }
+  if (keyIsDown(RIGHT_ARROW)) {
+    newX += 1;
+  }
+  if (keyIsDown(LEFT_ARROW)) {
+    newX -= 1;
   }
 
-  if (key === " " && state === "start screen") {
-    state = "game";
-    backgroundMusic.loop();
+  if (isValidMove(newX, newY)) {
+    movePlayer(newX, newY);
   }
 }
 
@@ -114,7 +121,7 @@ function generateMaze(cols, rows) {
         row.push(WALL);
       } else {
         // Create maze structure
-        row.push(PLAYER);
+        row.push(PLAYER); // Placeholder for maze path
       }
     }
     grid.push(row);
