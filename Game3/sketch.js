@@ -77,6 +77,11 @@ function keyPressed() {
   if (isValidMove(newX, newY)) {
     movePlayer(newX, newY);
   }
+
+  if (key === " " && state === "start screen") {
+    state = "game";
+    backgroundMusic.loop();
+  }
 }
 
 function movePlayer(x, y) {
