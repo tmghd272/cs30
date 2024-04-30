@@ -14,6 +14,7 @@ JavaScripts
 ## Projects
 - [Interactive-Scene](Game)
 - [Arrays-and-Object-Notation](Game2)
+- [Grid-Based-Game](Game3)
 
 
 # [git](https://github.com/tmghd272/cs30)
