@@ -84,3 +84,80 @@ function generateRandomMaze(cols, rows) {
   }
   return maze;
 }
+
+function keyPressed() {
+  if (keyIsDown === "r") {
+    grid = generateRandomMaze(GRID_SIZE, GRID_SIZE);
+  }
+
+  if (keyIsDown === "e") {
+    grid = generateEmptyGrid(GRID_SIZE, GRID_SIZE);
+  }
+
+  if (keyIsDown(87)) {   //up
+    movePlayer(player.x + 0, player.y - 1); //0 on x axis, -1 on y axis
+  }
+
+  if (keyIsDown(83)) {   //down
+    movePlayer(player.x + 0, player.y + 1); //0 on x axis, 1 on y axis
+  }
+
+  if (keyIsDown(68)) {   //right
+    movePlayer(player.x + 1, player.y + 0); //1 on x axis, 0 on y axis
+  }
+
+  if (keyIsDown(65)) {   //left
+    movePlayer(player.x - 1, player.y + 0); //-1 on x axis, 0 on y axis
+  }
+
+  if (key === " " && state === "start screen") {
+    state = "game";
+    backgroundMusic.loop();
+  }
+}
+
+function movePlayer(x, y) {
+  if (x < GRID_SIZE && y < GRID_SIZE &&
+      x >= 0 && y >= 0 && grid[y][x] === OPEN_TILE) {
+      let oldX = player.x;
+      let oldY = player.y;
+
+      player.x = x;
+      player.y = y;
+
+      grid[oldY][oldX] = OPEN_TILE;
+      grid[player.y][player.x] = PLAYER;
+  } else {
+    cantWalkSound.play();
+  }
+}
+
+function mousePressed() {
+  let x = Math.floor(mouseX/cellSize);
+  let y = Math.floor(mouseY/cellSize);
+
+  toggleCell(x, y);
+}
+
+function toggleCell(x, y) {
+  if (x < GRID_SIZE && y < GRID_SIZE &&
+      x >= 0 && y >= 0) {
+    if (grid[y][x] === OPEN_TILE) {
+      grid[y][x] = IMPASSIBLE;
+    }
+    else if (grid[y][x] === IMPASSIBLE) {
+      grid[y][x] = OPEN_TILE;
+    }
+  }
+}
+
+function generateEmptyGrid(cols, rows) {
+  let emptyArray = [];
+  for (let y = 0; y < rows; y++) {
+    emptyArray.push([]);
+    for (let x = 0; x < cols; x++) {
+      emptyArray[y].push(0);
+    }
+  }
+  return emptyArray;
+}
