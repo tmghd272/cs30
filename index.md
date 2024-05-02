@@ -10,6 +10,9 @@ JavaScripts
 - [Translate/Rotate](Translate)
 - [Bubble Movement](Bubble)
 - [2D Grid](Grid)
+- [Walker](Walker)
+- [Walker with Arrays](Walker with Arrays)
+- [Fireworks OOP](Fireworks)
 
 ## Projects
 - [Interactive-Scene](Game)
