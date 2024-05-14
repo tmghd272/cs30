@@ -43,16 +43,16 @@ function setup() {
 }
 
 function draw() {
-  // if (state === "start screen") {
-  //   background("#522796");
-  //   fill('white');
-  //   textFont('Comic Sans MS', 35)
-  //   textAlign(CENTER, CENTER);
-  //   text('welcome press spacebar', 350, 350);
-  // } else if (state === "game") {
+  if (state === "start screen") {
+    background("#522796");
+    fill('white');
+    textFont('Comic Sans MS', 35)
+    textAlign(CENTER, CENTER);
+    text('welcome press spacebar', 350, 350);
+  } else if (state === "game") {
     background(220);
     displayGrid();
-  
+  }
 }
 
 function keyPressed() {
