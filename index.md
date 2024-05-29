@@ -13,6 +13,7 @@ JavaScripts
 - [Walker](Walker)
 - [Walker with Arrays](Walker with Arrays)
 - [Fireworks OOP](Fireworks)
+- [Clickable Button Demo](Clickable)
 
 ## Projects
 - [Interactive-Scene](Game)
